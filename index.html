@@ -458,21 +458,24 @@
       <form action="traitement.php" method="post" class="needs-validation" novalidate>
         <div class="row w-100 mx-auto">
           <div class="col-sm-12 col-md-4 col-lg-4 offset-md-2 offset-lg-2 pb-4">
-            <input type="text" class="form-control py-4" placeholder="Full Name" id="validationTooltip01" required>
+            <input type="text" class="form-control py-4"
+             placeholder="Full Name" id="validationTooltip01" required name="name">
           </div>
           <div class="col-sm-12 col-md-4 col-lg-4 pb-4">
-            <input type="email" class="form-control  py-4" placeholder="Your Email" required>
+            <input type="email" class="form-control  py-4" 
+            placeholder="Your Email" required name="email">
           </div>
         </div>
         <div class="row w-100 mx-auto">
           <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 pb-4 ">
-            <input type="text" class="form-control py-4" placeholder="Your Title" required>
+            <input type="text" class="form-control py-4" 
+            placeholder="Your Title" required name="title">
           </div>
         </div>
         <div class="row w-100 mx-auto">
           <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2 pb-4">
-            <textarea class="form-control py-4" id="validationTextarea" rows="7" placeholder="Your Comment"
-              required></textarea>
+            <textarea class="form-control py-4" id="validationTextarea" rows="7" 
+            placeholder="Your Comment" required name="comment"></textarea>
           </div>
         </div>
         <div class="row w-100 mx-auto">
