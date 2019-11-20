@@ -1,6 +1,31 @@
 <?php
 
+$name = $email = $title = $comment = "";
+// $name = $_POST["name"];
 
+function test_input($data){
+    //trim — Supprime les espaces (ou d'autres caractères) en début et fin de chaîne 
+    //may need to use option 'character_mask' to be more precise?
+    //triming spaces and new lines from a textarea could be a problem?
+    $data = trim($data);
+    $data = stripSlashes($data);
+    $data = htmlspecialchars($data);
+
+    return $data;
+}
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    $name = test_input($_POST["name"]);
+    $email = test_input($_POST["email"]);
+    $title = test_input($_POST["title"]);
+    $comment = test_input($_POST["comment"]);
+    
+}
+
+
+
+// echo "testing ".$name;
 // echo $_POST["name"];
 if($name == "nemo"){
     //dot is used to concatenate
