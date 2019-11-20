@@ -1,0 +1,412 @@
+/*-------------section principal---------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html:root{
+    --color-primary-white: white;
+    --color-secondary-blue: #10c9c3;
+    --color-third-dark: black;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*-----COLOR SECTION-----*/
+
+.bg-primary{
+    background-color:var(--color-primary-white) !important;
+}
+
+.bg-secondary{
+    background-color: var(--color-secondary-blue) !important;
+}
+
+.bg-dark{
+    background-color: var(--color-third-dark) !important;
+}
+
+.text-baby-blue{
+    color: var(--color-secondary-blue);
+}
+
+.load-more-color{
+    color : #8e8e8e;
+}
+
+.bg-grey{
+    background-color: rgb(224, 224, 224);
+}
+
+/*-----FONT SECTION-----*/
+
+.f-style-normal{
+    font-style: inherit;
+}
+
+.font-size-3{
+    font-size: 0.75em;
+}
+
+/*-----CUSTOM WIDTH HEIGHT SECTION-----*/
+.mw-50px{
+    max-width: 50px;
+}
+.font-size-4{
+    font-size: 0.9em;
+}
+
+
+/*-------------section sacha---------*/
+nav{
+    font-size: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.nav-active-color{
+    color: var(--color-secondary-blue) !important;
+}
+
+/*pour centrer logo de nav sur la longueur*/
+nav p{
+    margin: 0;
+}
+
+/*setion prof skill*/
+/* #prof-skill.pl-5{
+    padding-left: 10rem!important;
+} */
+/*-----prof skill background-image-----*/
+.bg-image-spirals{
+    background-image: url(../media/prof-test.png);
+    /* background-image: url(../media/spirals2.png); */
+    /* background-position: top right; */
+    /* background-size: 50% 100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.container-fluid.bg-image-spirals{
+    height: 570px;
+}
+
+#num-stat-row .col-lg-1{
+    padding: 0;
+    /* margin-right: 5px; */
+    max-width: 50px;
+    
+}
+
+#num-stat-row .col-lg-2{
+    padding-left: 0;
+    /* margin-right: 5px; */
+    font-size: 15px;
+}
+
+/*section portfolio*/
+.bg-dark-grey{
+    background-color: gray;
+}
+
+.portfolio-dimensions{
+    width: 340px;
+    height: 300px;
+}
+
+/*pseudo element before pour mettre en place le plus*/
+.portfolio-dimensions::before{
+    content: url("../media/hover-eye.png");
+    display: none;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.575);
+    color: var(--white);
+    text-align: center;
+    line-height: 330px;
+    cursor: pointer;
+}
+
+/*pseudo class hover pour changer display du pseudo element before*/
+/*faire 1 : pour pseudo class et 2 :: pour pseudo element (aide distinction)*/
+.portfolio-dimensions:hover:before{
+    display: block;
+}
+
+.bg-work-1{
+
+    background-image: url(../media/time.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-2{
+    background-image: url(../media/circuitimprime.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-3{
+    background-image: url(../media/keyboard-photo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-4{
+    background-image: url(../media/macro.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-5{
+    background-image: url(../media/screen-code.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-6{
+    background-image: url(../media/webtree.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-7{
+    background-image: url(../media/office-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-8{
+    background-image: url(../media/pcdesign.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-9{
+    background-image: url(../media/website.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-10{
+    background-image: url(../media/webpage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-11{
+    background-image: url(../media/responsive-web-design-concept.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-work-12{
+    background-image: url(../media/searching-the-web.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bg-work-13{
+    background-image: url(../media/ipad-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bg-work-14{
+    background-image: url(../media/computer-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bg-work-15{
+    background-image: url(../media/purse-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bg-work-16{
+    background-image: url(../media/smart-home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*need to put transition on original "position" (so to speak) so that when trans end, it does anim too*/
+#load-more{
+    transition: background-color 0.2s linear;
+}
+#load-more:hover{
+    cursor: pointer;
+    color: white !important;
+    background-color: var(--color-secondary-blue) !important;
+    transition: background-color 0.2s linear;
+}
+
+.img-service-size{
+    height: 40px;
+}
+
+.form-control{
+    border-radius: 0;
+    border: none;
+}
+
+
+@media (min-width: 1199.99px) {
+    .bg-image-profess{
+        background-image: url(../media/fondprofessionnal.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .bg-image-profess{
+        background-image: url(../media/fondprofessionnal.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+ }
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+
+    .bg-image-spirals{
+        background-image: none;
+    }
+    .bg-image-profess{
+        background-image: none;
+    }
+    li.nav-item {
+        padding: 0%;
+        border-bottom: 1px solid #0000003a;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+
+    .bg-image-spirals{
+        background-image: none;
+    }
+    .bg-image-profess{
+        background-image: none;
+    }
+    li.nav-item {
+        padding: 0%;
+        border-bottom: 1px solid #0000003a;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 575.99px) {
+
+    .bg-image-spirals{
+        background-image: none;
+    }
+    .bg-image-profess{
+        background-image: none;
+    }
+
+    .w-sm-100{
+        width: 100%;
+    }
+    li.nav-item {
+        padding: 0%;
+        border-bottom: 1px solid #0000003a;
+        width: 100%;
+        text-align: center;
+    }
+}
+/*-------------section quentin---------*/
+
+.img-filter-gs{
+    -webkit-filter: invert(40%);
+    filter: invert(40%);
+}
+
+.carousel-indicators li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-primary-white) ;
+    border: 2px solid #00b7ff00;
+} 
+
+.carousel-indicators li.active{
+    border: 2px solid #ffffff;
+}
+
+iframe{
+    border : 0;
+}
+
+/*----- HEIGHT AND WIDTH SECTION-----*/
+
+/* .min-height-c-f-300{
+    min-height: 500px;
+}
+.min-height-c-f-500{
+    min-height: 500px;
+}
+.min-height-c-f-750{
+    min-height: 750px;
+} */
+
+/*-----BACKGROUND IMAGE-----*/
+.bg-image-header{
+    background-image: url(../media/banniere-header.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/*------BUTTON ERASE----*/
+
+.btn-primary{
+    background-color: var(--color-secondary-blue) !important;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+
+@media (min-width: 1199.99px) {
+    .min-height-video-resp{
+        min-height: 600px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .min-height-video-resp{
+        min-height: 550px !important;
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 991.99px) {
+
+    .min-height-video-resp{
+        min-height: 400px !important;
+    }
+ }
+
+ @media (min-width: 576px) and (max-width: 767.99px) {
+
+    .min-height-video-resp{
+        min-height: 300px !important;
+    }
+
+ }
+
+ @media (max-width: 575.99px) {
+
+    .min-height-video-resp{
+        min-height: 280px !important;
+    }
+ }
