@@ -67,6 +67,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 echo "Voici le resultat après verification : -".$name.", -".$email.", -".$title.", -".$comment." ";
 
+$to = 'sacha.h@codeur.online';
+$subject = 'Bien reçu vos info php';
+$message = 'Bonjour !';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+'Reply-To: webmaster@example.com' . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
+
+$sentMail = mail($to, $subject, $message);
+if($sentMail == TRUE){
+    echo "<p>Mail has been sent to : ".$to."<p>";
+}
+else{
+    echo "<p>Mail hasn't been sent, sorry<p>";
+}
+
+
+
 
 //allows me to visualy see in a browser what a form has sent me with POST method of html form
 // source : https://stackoverflow.com/questions/7093363/how-to-print-r-post-array/7093446
@@ -93,9 +110,11 @@ foreach ($_SERVER as $key => $value) {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
+
 // header("Location: http://localhost:8080/"); /* Redirection du navigateur */
 
 // /* Assurez-vous que la suite du code ne soit pas exécutée une fois la redirection effectuée. */
 // exit;
+
 
 ?>
