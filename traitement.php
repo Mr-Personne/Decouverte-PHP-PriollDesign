@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 // var_dump($_POST);
 // below should also work (useful maybe so i can start to get familliar with php loops?) :
 foreach ($_POST as $key => $value) {
@@ -69,7 +70,8 @@ echo "Voici le resultat après verification : -".$name.", -".$email.", -".$title
 
 $to = 'sacha.h@codeur.online';
 $subject = 'Bien reçu vos info php';
-$message = 'Bonjour !';
+$message = 'Bonjour !Voici les informations envoyées dans
+ le formulaire contient : '.$name.", -".$email.", -".$title.", -".$comment." ";
 $headers = 'From: webmaster@example.com' . "\r\n" .
 'Reply-To: webmaster@example.com' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
@@ -87,6 +89,7 @@ else{
     echo "<p>Mail has been sent to : ".$to."<p>";
 }
 
+// needs to install sudo apt-get install sendmail before mail() works?
 
 
 //allows me to visualy see in a browser what a form has sent me with POST method of html form
