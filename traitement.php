@@ -75,13 +75,17 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
 $sentMail = mail($to, $subject, $message);
-if($sentMail == TRUE){
-    echo "<p>Mail has been sent to : ".$to."<p>";
+// mail($to, $subject, $message);
+
+if(!$sentMail){
+    // error_get_last — Get the last occurred error
+    $errorMessage = error_get_last()['message'];
+    echo "<p>Mail hasn't been sent, sorry<p>";
+    print_r($errorMessage);
 }
 else{
-    echo "<p>Mail hasn't been sent, sorry<p>";
+    echo "<p>Mail has been sent to : ".$to."<p>";
 }
-
 
 
 
@@ -92,11 +96,13 @@ else{
 // //you can see current file name with below
 // print_r(test_input($_SERVER));
 // echo "</pre>";
+
+
 //more secure to loop through them and use testing function on each item
-foreach ($_SERVER as $key => $value) {
-    echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
+// foreach ($_SERVER as $key => $value) {
+//     echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
   
-  } 
+//   } 
 
 
 //var_dump is also useful to see stuff
@@ -109,7 +115,8 @@ foreach ($_SERVER as $key => $value) {
 // htmlspecialchars($_POST["comment"]);
 /////////////////////////////////////////////////////////////////////////////////////////
 
-
+// error_get_last — Get the last occurred error
+print_r(error_get_last());
 
 // header("Location: http://localhost:8080/"); /* Redirection du navigateur */
 
