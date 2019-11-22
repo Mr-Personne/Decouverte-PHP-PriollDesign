@@ -83,13 +83,13 @@ $message1 = "
  <html>
  <head>
  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
- <title></title>
+ <title>Bien reçu vos info php</title>
  </head>
  <body>
-     <div id='email-wrap' style='background: #151515;color: #FFF;'>
-     <p>Bonjour,</p><br>
-     <p>Voici les informations reçu du formulaire : </p><br>
-     <p>".$name."</p><p>".$email."</p><p>".$title."</p><p>".$comment."</p>
+     <div>
+     <p>Bonjour,</p>
+     <p>Voici les informations reçu du formulaire : </p>
+     <p>Nom : ".$name."</p><p>Email : ".$email."</p><p>Title : ".$title."</p><p>Votre message : ".$comment."</p>
      <p>Thank you,</p>
      <p>Administration</p>
      </div>
