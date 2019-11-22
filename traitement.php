@@ -1,6 +1,6 @@
 <?php
-phpinfo();
-// var_dump($_POST);
+$_POST["name"] = test_input($_POST["name"]);
+var_dump($_POST);
 // below should also work (useful maybe so i can start to get familliar with php loops?) :
 foreach ($_POST as $key => $value) {
     echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
@@ -30,9 +30,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         //preg_match — Perform a regular expression match
         $nameErr = "Only letters and white space allowed";
         echo "<p>Only letters and white space allowed<p>";
+        // die();
     }
     else{
         $name = test_input($_POST["name"]);
+        $_POST["name"] = test_input($_POST["name"]);
     }
 
 
@@ -44,9 +46,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // If omitted, FILTER_DEFAULT will be used. check doc php Types of filters for list 
         $emailErr = "Invalid email format"; 
         echo "<p>Invalid email format<p>";
+        
     }
     else{
         $email = test_input($_POST["email"]);
+        $_POST["email"] = test_input($_POST["email"]);
     }
 
     if(empty($_POST["title"])){
@@ -54,6 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     else{
         $title = test_input($_POST["title"]);
+        $_POST["title"] = test_input($_POST["title"]);
     }
 
     if(empty($_POST["comment"])){
@@ -61,6 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     else{
         $comment = test_input($_POST["comment"]);
+        $_POST["comment"] = test_input($_POST["comment"]);
     }
     
     
@@ -72,11 +78,31 @@ $to = 'sacha.h@codeur.online';
 $subject = 'Bien reçu vos info php';
 $message = 'Bonjour !Voici les informations envoyées dans
  le formulaire contient : '.$name.", -".$email.", -".$title.", -".$comment." ";
+
+$message1 = "
+ <html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title></title>
+ </head>
+ <body>
+     <div id="email-wrap" style='background: #151515;color: #FFF;'>
+     <p>Bonjour,</p><br>
+     <p>Voici les informations reçu du formulaire : </p><br>
+     <p>".$name."</p><p>".$email."</p><p>".$title."</p><p>".$comment."</p>
+     <p>Thank you,</p>
+     <p>Administration</p>
+     </div>
+ </body>
+ </html>
+     ";
+
 $headers = 'From: webmaster@example.com' . "\r\n" .
 'Reply-To: webmaster@example.com' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
-$sentMail = mail($to, $subject, $message);
+//sends mail and assigns true, if not sent assigns false
+$sentMail = mail($to, $subject, $message1);
 // mail($to, $subject, $message);
 
 if(!$sentMail){
@@ -102,10 +128,10 @@ else{
 
 
 //more secure to loop through them and use testing function on each item
-// foreach ($_SERVER as $key => $value) {
-//     echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
+foreach ($_SERVER as $key => $value) {
+    echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
   
-//   } 
+  } 
 
 
 //var_dump is also useful to see stuff
@@ -125,6 +151,6 @@ print_r(error_get_last());
 
 // /* Assurez-vous que la suite du code ne soit pas exécutée une fois la redirection effectuée. */
 // exit;
-
+phpinfo();
 
 ?>
