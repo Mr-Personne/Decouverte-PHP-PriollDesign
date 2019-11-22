@@ -302,6 +302,51 @@ if(!$sentMail){
       </div>
   </main>
 
+  <footer>
+  <div class="container-fluid bg-dark text-white pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3 pb-md-5 d-flex flex-column text-sm-left">
+          <p class="p-2 font-weight-bold">Piroll Design, Inc.</p>
+          <p class="font-size-3">© 2019 Reproduction Sacha HENRY, Quentin PETREQUIN. Groupe 8.</p>
+        </div>
+        <div
+          class="col-sm-6 col-md-6 col-lg-2 offset-lg-1 font-size-3 pb-5 d-flex flex-column pt-xs-3 pt-sm-3 pt-md-3 pt-lg-3 text-sm-center text-md-center text-lg-left text-xl-left">
+          <p>hello@pirolltheme.com</p>
+          <p>+44 987 065 908</p>
+        </div>
+        <div
+          class="col-4 col-sm-4 col-md-4 col-lg-1 offset-lg-3 font-size-3 pt-md-3 pt-lg-3 pb-5 text-center text-sm-center text-md-center text-lg-left text-xl-left">
+          <ul class="list-unstyled">
+            <li>Project</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Carreer</li>
+          </ul>
+        </div>
+        <div
+          class="col-4 col-sm-4 col-md-4 col-lg-1 font-size-3 pt-md-3 pt-lg-3 pb-5 text-center text-sm-center text-md-center text-lg-left text-xl-left">
+          <ul class="list-unstyled">
+            <li>News</li>
+            <li>Event</li>
+            <li>Contact</li>
+            <li>Legals</li>
+          </ul>
+        </div>
+        <div
+          class="col-4 col-sm-4 col-md-4 col-lg-1 font-size-3 pt-md-3 pt-lg-3 text-center text-sm-center text-md-center text-lg-left text-xl-left">
+          <ul class="list-unstyled">
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Dribbble</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
 
 
   <!-- Optional JavaScript -->
