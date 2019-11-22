@@ -83,7 +83,7 @@ $message1 = "
  <html>
  <head>
  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-     <title></title>
+ <title></title>
  </head>
  <body>
      <div id='email-wrap' style='background: #151515;color: #FFF;'>
@@ -97,12 +97,15 @@ $message1 = "
  </html>
      ";
 
-$headers = 'From: webmaster@example.com' . "\r\n" .
-'Reply-To: webmaster@example.com' . "\r\n" .
-'X-Mailer: PHP/' . phpversion();
+//parameter 'header' of mail is what alllows us to style email with html "Content-Type: text/html; charset=ISO-8859-1"
+$headers = "From: " . $email . "\r\n";
+// $headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
+// $headers .= "CC: susan@example.com\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 //sends mail and assigns true, if not sent assigns false
-$sentMail = mail($to, $subject, $message1);
+$sentMail = mail($to, $subject, $message1, $headers);
 // mail($to, $subject, $message);
 
 if(!$sentMail){
