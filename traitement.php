@@ -235,25 +235,25 @@ if(!$sentMail){
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link nav-active-color" href="#">HOME <span class="sr-only">(current)</span></a>
+                  <a class="nav-link nav-active-color" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about-us">ABOUT</a>
+                  <a class="nav-link" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign/#about-us">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#work">WORK</a>
+                  <a class="nav-link" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign/#work">WORK</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#process">PROCESS</a>
+                  <a class="nav-link" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign/#process">PROCESS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#services">SERVICES</a>
+                  <a class="nav-link" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign/#services">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                  <a class="nav-link" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign/#testimonials">TESTIMONIALS</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">CONTACT</a>
+                  <a class="nav-link" href="http://sachah.promo-vesoul33.codeur.online/php-pirolldesign/#contact">CONTACT</a>
                 </li>
               </ul>
             </div>
