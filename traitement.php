@@ -1,11 +1,10 @@
 <?php
-$_POST["name"] = test_input($_POST["name"]);
-var_dump($_POST);
+
 // below should also work (useful maybe so i can start to get familliar with php loops?) :
-foreach ($_POST as $key => $value) {
-    echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
+// foreach ($_POST as $key => $value) {
+//     echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
   
-  } 
+// } 
 
 $nameErr = $emailErr = $titleErr = $commentErr = "";
 $name = $email = $title = $comment = "";
@@ -31,6 +30,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nameErr = "Only letters and white space allowed";
         echo "<p>Only letters and white space allowed<p>";
         // die();
+        header("Location: http://localhost:8080/");
+        exit;
     }
     else{
         $name = test_input($_POST["name"]);
@@ -46,6 +47,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // If omitted, FILTER_DEFAULT will be used. check doc php Types of filters for list 
         $emailErr = "Invalid email format"; 
         echo "<p>Invalid email format<p>";
+        header("Location: http://localhost:8080/");
+        exit;
         
     }
     else{
@@ -55,6 +58,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if(empty($_POST["title"])){
         $nameErr = "Ce champ est requis";
+        header("Location: http://localhost:8080/");
+        exit;
     }
     else{
         $title = test_input($_POST["title"]);
@@ -63,6 +68,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if(empty($_POST["comment"])){
         $nameErr = "Ce champ est requis";
+        header("Location: http://localhost:8080/");
+        exit;
     }
     else{
         $comment = test_input($_POST["comment"]);
@@ -72,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
 }
 
-echo "Voici le resultat après verification : -".$name.", -".$email.", -".$title.", -".$comment." ";
+// echo "Voici le resultat après verification : -".$name.", -".$email.", -".$title.", -".$comment." ";
 
 $to = 'sacha.h@codeur.online';
 $subject = 'Bien reçu vos info php';
@@ -104,8 +111,9 @@ $headers = "From: " . $email . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-//sends mail and assigns true, if not sent assigns false
-$sentMail = mail($to, $subject, $message1, $headers);
+//sends MAIL and assigns true, if not sent assigns false
+// $sentMail = mail($to, $subject, $message1, $headers);
+$sentMail = FALSE;
 // mail($to, $subject, $message);
 
 if(!$sentMail){
@@ -131,10 +139,10 @@ else{
 
 
 //more secure to loop through them and use testing function on each item
-foreach ($_SERVER as $key => $value) {
-    echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
+// foreach ($_SERVER as $key => $value) {
+//     echo '<p>'.test_input($key).' => '.test_input($value).'</p>';
   
-  } 
+// } 
 
 
 //var_dump is also useful to see stuff
@@ -154,6 +162,6 @@ print_r(error_get_last());
 
 // /* Assurez-vous que la suite du code ne soit pas exécutée une fois la redirection effectuée. */
 // exit;
-phpinfo();
+// phpinfo();
 
 ?>
