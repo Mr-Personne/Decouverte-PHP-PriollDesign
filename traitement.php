@@ -82,11 +82,11 @@ $message = 'Bonjour !Voici les informations envoyées dans
 $message1 = "
  <html>
  <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
      <title></title>
  </head>
  <body>
-     <div id="email-wrap" style='background: #151515;color: #FFF;'>
+     <div id='email-wrap' style='background: #151515;color: #FFF;'>
      <p>Bonjour,</p><br>
      <p>Voici les informations reçu du formulaire : </p><br>
      <p>".$name."</p><p>".$email."</p><p>".$title."</p><p>".$comment."</p>
