@@ -104,9 +104,6 @@ $message1 = "
      <p>Thank you,</p>
      <p>Administration</p>
      </div>
-     <script>
-     alert('you have been hacked');
-     </script>
  </body>
  </html>
      ";
